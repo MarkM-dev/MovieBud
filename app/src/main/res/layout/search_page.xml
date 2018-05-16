@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/MyBackgroundDark"
+    >
+    <LinearLayout 
+         android:id="@+id/searchPage_ad_layout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:orientation="horizontal"
+         >
+   		 <com.google.android.gms.ads.AdView android:id="@+id/searchPage_adView"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         ads:adUnitId="ca-app-pub-7088636357536669/8241795039"
+                         ads:adSize="BANNER"/>
+
+   		 <ImageButton
+   		     android:id="@+id/searchPage_adCloseBtn"
+   		     android:layout_width="20dp"
+   		     android:layout_height="20dp"
+   		     android:src="@drawable/abc_ic_clear"
+   		     android:background="#000" />
+   		 
+     </LinearLayout>
+	
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+
+        <EditText
+            android:id="@+id/searchPage_search_editText"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="15dp"
+            android:ems="10" 
+            android:hint="@string/searchPage_search_hint"
+            android:textColor="@color/WhiteSmoke"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+            >
+            <requestFocus />
+        </EditText>
+        
+        <Button
+        android:id="@+id/searchPage_searchEditText_clear_button"      
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/abc_ic_clear_disabled" />
+        
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/searchPage_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/searchPage_no_movies_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="18sp"
+        android:text="@string/searchPage_no_movies_found" 
+        android:visibility="gone"
+        />
+
+    <ListView
+        android:id="@+id/searchPage_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+    </ListView>
+
+</LinearLayout>

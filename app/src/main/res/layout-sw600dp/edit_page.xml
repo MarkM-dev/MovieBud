@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MyBackgroundDark"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@color/MyBackgroundDark"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/editPage_title_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="11dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/editPage_title_hint"
+                android:inputType="textCapWords|textMultiLine"
+                android:textColor="@color/WhiteSmoke"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ToggleButton
+                    android:id="@+id/editPage_watched_toggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_weight="90"
+                    android:background="@null"
+                    android:gravity="bottom|left"
+                    android:textColor="@color/toggle_button_color"
+                    android:textOff="unwatched"
+                    android:textOn="watched"
+                    android:textSize="27sp" />
+
+                <ImageButton
+                    android:id="@+id/editPage_delete_imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="10"
+                    android:background="@null"
+                    android:contentDescription="@string/cDesc_editPage_delete_imageButton"
+                    android:src="@android:drawable/ic_menu_delete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/editPage_urlImage_imageView"
+                        android:layout_width="225dp"
+                        android:layout_height="321dp"
+                        android:background="@android:drawable/alert_dark_frame"
+                        android:contentDescription="@string/cDesc_editPage_urlImage_imageView" />
+
+                    <ProgressBar
+                        android:id="@+id/editPage_progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/editPage_errorMsg"
+                        android:layout_width="188dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/MyRed" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/editPage_genre_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:hint="@string/editPage_genre_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords|textMultiLine"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" />
+
+                    <EditText
+                        android:id="@+id/editPage_year_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@null"
+                        android:hint="@string/editPage_year_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:text="@string/editPage_mpaa_rated"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/editPage_mpaa_rating_editText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/editPage_mpaa_rating_hint"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" >
+
+                        <TextView
+                            android:id="@+id/editPage_runtime_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="@string/editPage_runtime_textView"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/editPage_runtime_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:background="@null"
+                            android:hint="@string/editPage_runtime_hint"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/editPage_rt_rating_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/editPage_rt_rating_imageView"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:contentDescription="@string/cDesc_editPage_rt_rating_imageView"
+                            android:src="@drawable/rtrating" />
+
+                        <TextView
+                            android:id="@+id/editPage_rt_rating_colon_space_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/editPage_rt_rating_colon_space_textview"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:id="@+id/editPage_rt_rating_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/editPage_my_rating_imageview"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:contentDescription="@string/cDesc_editPage_rt_rating_textView"
+                            android:src="@android:drawable/btn_star_big_on" />
+
+                        <TextView
+                            android:id="@+id/editPage_my_rating_colon_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text=":"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:id="@+id/editPage_my_rating_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:hint="@string/editPage_my_rating_hint"
+                            android:textColor="@color/WhiteSmoke"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/editPage_imdb_button"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                    android:text="@string/editPage_show_button"
+                    android:textColor="@color/WhiteSmoke" />
+
+                <Button
+                    android:id="@+id/editPage_share_button"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                    android:text="@string/editPage_share_button"
+                    android:textColor="@color/WhiteSmoke" />
+
+                <Button
+                    android:id="@+id/editPage_rate_button"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                    android:text="@string/editPage_rate_button"
+                    android:textColor="@color/WhiteSmoke" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editPage_my_rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/editPage_my_rating_textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/editPage_rate_textView"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="23sp" />
+
+                <SeekBar
+                    android:id="@+id/editPage_my_rating_seekBar"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/editPage_my_rating_layout_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="23sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editPage_url_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editPage_url_local_textview"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" />
+
+                    <EditText
+                        android:id="@+id/editPage_url_local_EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@null"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="18sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editPage_url_online_textView"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" />
+
+                    <EditText
+                        android:id="@+id/editPage_url_detailed_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="18sp" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="23dp" >
+
+                    <TextView
+                        android:id="@+id/editPage_directors_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editPage_directors_textView"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editPage_directors_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@null"
+                        android:hint="@string/editPage_directors_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/editPage_cast_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editPage_cast_textView"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editPage_cast_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@null"
+                        android:hint="@string/editPage_cast_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="23dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/editPage_synopsis_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editPage_synopsis_textView"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editPage_synopsis_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="8dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="@string/editPage_synopsis_hint"
+                        android:inputType="textMultiLine"
+                        android:lineSpacingExtra="3dp"
+                        android:minHeight="90dp"
+                        android:textColor="@color/WhiteSmoke"
+                        android:textSize="23sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/editPage_cancel_button"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                    android:text="@string/editPage_cancel_button"
+                    android:textColor="@color/WhiteSmoke" />
+
+                <Button
+                    android:id="@+id/editPage_save_button"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+                    android:text="@string/editPage_save_button"
+                    android:textColor="@color/WhiteSmoke" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

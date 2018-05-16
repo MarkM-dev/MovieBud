@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MyBackgroundDark"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="15dp"
+            android:layout_weight="10"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/main_imageView_icon"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="10"
+                android:contentDescription="@string/cDesc_main_logo"
+                android:src="@drawable/myapplogo" />
+
+            <TextView
+                android:id="@+id/main_app_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_weight="80"
+                android:text="@string/main_app_headline"
+                android:textColor="@color/WhiteSmoke"
+                android:textSize="45sp" />
+
+            <ImageButton
+                android:id="@+id/main_add_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="5"
+                android:background="@null"
+                android:contentDescription="@string/cDesc_main_add_button"
+                android:src="@android:drawable/ic_input_add" />
+
+            <ImageButton
+                android:id="@+id/main_settings_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="5"
+                android:background="@null"
+                android:contentDescription="@string/cDesc_main_settings_button"
+                android:src="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/main_sort_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:background="@drawable/abc_spinner_ab_holo_dark"
+                android:text="@string/main_sort_a_z"
+                android:textColor="@color/WhiteSmoke"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <Spinner
+                android:id="@+id/main_sort_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/main_view2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/Black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_no_items_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/main_no_items_textView"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="27sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/main_my_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="90" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/main_ad_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7088636357536669/5288328634" />
+
+        <ImageButton
+            android:id="@+id/Main_adCloseBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#000"
+            android:src="@drawable/abc_ic_clear" />
+    </LinearLayout>
+
+</LinearLayout>

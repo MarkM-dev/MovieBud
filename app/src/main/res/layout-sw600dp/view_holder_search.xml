@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/abc_menu_dropdown_panel_holo_dark"
+    >
+    
+    <ImageView
+        android:id="@+id/viewHolderSearch_pic_imageView"
+        android:layout_width="92dp"
+        android:layout_height="138dp"
+        android:gravity="center"
+        android:contentDescription="@string/cDesc_viewHolderSearch_pic_imageView"
+         />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="5dp"
+        android:layout_height="138dp"
+        android:background="@color/Blue" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="90"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/viewHolderSearch_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:text="Lord Of The Rings"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/viewHolderSearch_year_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="8dp"
+            android:text="(1997)"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/viewHolderSearch_synopsis_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="8dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="18sp"
+            android:text="Synopsis" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/viewHolderSearch_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/cDesc_viewHolderSearch_arrow"
+        android:src="@drawable/abc_ic_ab_back_holo_dark" 
+        android:rotation="180"
+        />
+
+</LinearLayout>

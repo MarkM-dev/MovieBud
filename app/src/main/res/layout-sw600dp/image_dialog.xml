@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+
+        <ImageButton
+            android:id="@+id/imageDialog_edit_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_menu_camera" 
+            android:layout_weight="5"
+            android:background="@drawable/abc_ab_share_pack_holo_dark"
+            android:contentDescription="@string/cDesc_editPage_imageDialog_edit_image_button"
+            />
+
+        <TextView
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="85"
+            />
+
+        <ImageButton
+            android:id="@+id/imageDialog_cancel_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="8dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" 
+            android:layout_weight="5"
+            android:background="@drawable/abc_ab_share_pack_holo_dark"
+            android:contentDescription="@string/cDesc_editPage_imageDialog_cancel_button"
+            />
+
+        <ImageButton
+            android:id="@+id/imageDialog_save_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/abc_ic_cab_done_holo_dark" 
+            android:layout_weight="5"
+            android:background="@drawable/abc_ab_share_pack_holo_dark"
+            android:contentDescription="@string/cDesc_editPage_imageDialog_save_button"
+            />
+
+    </LinearLayout>
+    
+	<FrameLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    >
+	    <ImageView
+	        android:id="@+id/imageDialog_imageView"
+	        android:layout_width="381dp"
+	        android:layout_height="545dp"
+	        android:layout_gravity="center"
+	        android:contentDescription="@string/cDesc_editPage_imageDialog_imageView"
+	        android:background="@android:drawable/alert_dark_frame" />
+	    
+	    <TextView 
+	        android:id="@+id/imageDialog_imageNA_textView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textColor="@color/WhiteSmoke"
+	        android:textSize="27sp"
+	        android:text="@string/editPage_imageDialog_image_na_text"
+	        android:visibility="gone"
+	        />
+	</FrameLayout>
+</LinearLayout>

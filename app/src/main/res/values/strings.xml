@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Movie Bud</string>
+    <string name="action_settings">Settings</string>
+	<string name="main_sort_a_z">a>z </string>
+	<string name="main_sort_genre">genre </string>
+	<string name="main_sort_year">year </string>
+	<string name="main_sort_my_rating">my rating </string>
+	<string name="main_sort_watched">watched </string>
+    <string name="main_app_headline">My Movies</string>
+    <string name="main_no_items_textView">Touch the \'+\' button to add a movie.</string>
+    
+    <string name="editPage_title_hint">Add Movie Title</string>
+    <string name="editPage_synopsis_hint">Synopsis</string>
+    <string name="editPage_movie_image_url">URL:</string>
+    <string name="editPage_rate_textView">"Rate: "</string>
+    <string name="editPage_genre_na">genre n/a</string>
+    <string name="editPage_year_na">(year n/a)</string>
+    <string name="editPage_na">n/a</string>
+    <string name="editPage_image_na">No available image. Try again later.</string>
+    <string name="editPage_image_na_add">Touch to add image.</string>
+    <string name="editPage_genre_hint">genre</string>
+    <string name="editPage_year_hint">year</string>
+    <string name="editPage_mpaa_rated">"Rated: "</string>
+    <string name="editPage_mpaa_rating_hint">PG rating</string>
+    <string name="editPage_runtime_textView">Runtime:</string>
+    <string name="editPage_runtime_hint">eg. 90 mins.</string>
+    <string name="editPage_rt_rating_colon_space_textview"> :</string>
+    <string name="editPage_my_rating_hint">touch to rate.</string>
+    <string name="editPage_show_button">Imdb</string>
+    <string name="editPage_share_button">Share</string>
+    <string name="editPage_rate_button">rate</string>
+    <string name="editPage_url_local_textview">"Local: "</string>
+    <string name="editPage_url_online_textView">"Online: "</string>
+    <string name="editPage_directors_textView">"Director(s): "</string>
+    <string name="editPage_directors_hint">eg. Steven Spielberg</string>
+    <string name="editPage_cast_textView">"Cast: "</string>
+    <string name="editPage_cast_hint">eg. Tom Hanks</string>
+    <string name="editPage_synopsis_textView">"Synopsis: "</string>
+    <string name="editPage_save_button">Save</string>
+    <string name="editPage_cancel_button">Cancel</string>
+    <string name="editPage_optionsMenu_save">Save</string>
+    <string name="editPage_optionsMenu_cancel">Cancel</string>
+    <string name="EditPage_cancel_alertDialog_title">Cancel</string>
+    <string name="EditPage_cancel_alertDialog_message">Go back without saving?</string>
+    <string name="editPage_imageDialog_image_na_text">No available image.</string>
+    
+	<string name="searchPage_na">n/a</string>
+    <string name="searchPage_url_local_na">n/a - will be created when movie is saved.</string>
+    <string name="searchPage_synopsis_na">No synopsis available.</string>
+    <string name="searchPage_runtime_mins">" mins"</string>
+    <string name="searchPage_search_hint">Search Movie...</string>
+    <string name="searchPage_no_movies_found">Nothing found.</string>
+    
+    <string name="alertDialog_delete_button">Delete</string>
+    <string name="alertDialog_save_button">Save</string>
+    <string name="alertDialog_goBack_button">Go Back</string>
+    <string name="alertDialog_cancel_button">Cancel</string>
+    
+    <string name="toast_movie_added">Movie added.</string>
+    <string name="toast_movie_updated">Saved.</string>
+    <string name="toast_item_deleted">Deleted.</string>
+    <string name="toast_all_items_deleted">All items have been removed.</string>
+    <string name="toast_editPage_empty_title">Must enter a movie Title</string>
+    
+    <string name="viewHolder_watched">watched</string>
+    <string name="viewHolder_unwatched">unwatched</string>
+    
+    <string name="alertDialog_delete_item_title">Delete</string>
+    <string name="alertDialog_delete_item_message">"Delete "</string>
+    <string name="alertDialog_delete_all_title">Delete All</string>
+    <string name="alertDialog_delete_all_message">Delete all items?</string>
+    
+	<string name="menu_main_delete_all_items">Delete All Items</string>
+    <string name="menu_main_about">About</string>
+    <string name="menu_main_purchase">Remove ads</string>
+    <string name="menu_main_more_apps">More apps</string>
+    <string name="menu_main_exit">Exit</string>
+    <string name="addMenu_add_movie">Add movie</string>
+    <string name="addMenu_search_movie">Search movie</string>
+    <string name="items_menu_edit">Edit</string>
+    <string name="items_menu_share">Share</string>
+    <string name="items_menu_delete">Delete</string>
+    
+	<string name="cDesc_main_logo">Application logo</string>
+	<string name="cDesc_main_add_button">Add button</string>
+    <string name="cDesc_main_settings_button">Settings button</string>
+    <string name="cDesc_editPage_delete_imageButton">Delete movie button</string>
+    <string name="cDesc_editPage_urlImage_imageView">movie\'s poster image</string>
+    <string name="cDesc_editPage_rt_rating_imageView">Rotten Tomatoes logo</string>
+    <string name="cDesc_editPage_rt_rating_textView">My rating small star image</string>
+	<string name="cDesc_editPage_imageDialog_edit_image_button">edit image button</string>
+    <string name="cDesc_editPage_imageDialog_cancel_button">cancel button</string>
+    <string name="cDesc_editPage_imageDialog_save_button">save button</string>
+    <string name="cDesc_editPage_imageDialog_imageView">movie poster image</string>
+	<string name="cDesc_viewHolder_pic_imageView">movie poster thumbnail</string>
+    <string name="cDesc_viewHolder_rating_imageView">my rating small star icon</string>
+    <string name="cDesc_viewHolder_arrow">go arrow</string>
+    <string name="cDesc_viewHolderSearch_pic_imageView">movie poster thumbnail</string>
+    <string name="cDesc_viewHolderSearch_arrow">go arrow</string>
+    
+    <string name="about_title">About</string>
+    <string name="about_msg">Movie Bud
+\n
+\nMovie Bud is a movie library management application.
+\n\nOnline movie searches are performed via the Rotten Tomatoes api.\n
+\nDesign &amp; Development:
+\nMark M.
+\nMarkM.dev@gmail.com.
+\n
+</string>
+    
+
+</resources>
