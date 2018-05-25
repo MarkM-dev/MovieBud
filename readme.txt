@@ -1,4 +1,4 @@
-"MovieBud" is the second application I've built as part of my studies at john-bryce.
+"MovieBud" is the second Android application I've built as part of my studies at john-bryce.
 
 MovieBud is a movie library management application.
 Online movie searches are performed via the Rotten Tomatoes api (no longer accepting private api calls).
